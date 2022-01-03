@@ -1,0 +1,28 @@
+﻿<Window x:Class="Stopwatch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stopwatch"
+        mc:Ignorable="d"
+        Title="Europe" Height="450" Width="800">
+    <ScrollViewer>
+        <StackPanel>
+            <Label x:Name="Headline" HorizontalAlignment="Center" Content="Time Left" FontSize="50" FontStyle="Italic"/>
+            <WrapPanel x:Name="CounterWrapPanel" HorizontalAlignment="center">
+                <Label x:Name="CounterHours" BorderBrush="Black" BorderThickness="2, 2, 1, 2" Content="Hours" FontSize="20" HorizontalAlignment="Center" FontStyle="Italic"/>
+                <Label x:Name="CounterMinuts" BorderBrush="Black" BorderThickness="1, 2, 1, 2" Content="Minutes" FontSize="20" HorizontalAlignment="Center" FontStyle="Italic"/>
+                <Label x:Name="CounterSeconds" BorderBrush="Black" BorderThickness="1, 2, 2, 2" Content="Seconds" FontSize="20" HorizontalAlignment="Center" FontStyle="Italic"/>
+            </WrapPanel>
+            <WrapPanel x:Name="InputsWrapPanel" Visibility="Visible" HorizontalAlignment="Center" Margin="0, 5, 0, 5">
+                <TextBox x:Name="HoursInput" PreviewTextInput="NumberValidationTextBox" BorderBrush="Black" BorderThickness="2, 2, 1, 2" FontStyle="Italic" Width="75"/>
+                <TextBox x:Name="MinutsInput" PreviewTextInput="NumberValidationTextBox" BorderBrush="Black" BorderThickness="1, 2, 1, 2" FontStyle="Italic" Width="75"/>
+                <TextBox x:Name="SecondsInput" PreviewTextInput="NumberValidationTextBox" BorderBrush="Black" BorderThickness="1, 2, 2, 2" FontStyle="Italic" Width="75"/>
+            </WrapPanel>
+            <WrapPanel x:Name="ButtonsWrapPanel" HorizontalAlignment="Center" Margin="0, 5, 0, 5">
+                <ToggleButton Margin="5, 5, 5, 5" Padding="5, 5, 5, 5" Content="Start" x:Name="StartStopButton" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked"></ToggleButton>
+                <Button Margin="5, 5, 5, 5" Padding="5, 5, 5, 5" x:Name="ResetButton" Content="Reset" Click="ResetButton_Click"></Button>
+            </WrapPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
