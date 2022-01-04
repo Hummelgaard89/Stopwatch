@@ -28,7 +28,7 @@ namespace Stopwatch
             thread.Start();
         }
         //Sets the time, depending on if the time is paused or reset it will set the remaining time to either the remainder of the time before the pause or the time inputed by the user.
-        //DateTime is used in case of expansion, wanting days, months or years also, the logic is the same, just needs to add the wanted parameters.
+        //DateTime is used in case of expansion, wanting days, months or years also, the logic is the same, just needs to add the wanted parameters..
         public void SetTime()
         {
             if (PauseIsAvailable == false)
